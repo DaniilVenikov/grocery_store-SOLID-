@@ -46,4 +46,13 @@ public class Product {
         this.producer = producer;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "typeProduct=" + typeProduct +
+                ", title='" + title + '\'' +
+                ", producer='" + producer + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

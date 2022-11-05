@@ -1,17 +1,15 @@
 package Filters;
 
-import Filters.Filter;
 import Product.Product;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class FilterForProduce implements Filter {
+public class FilterForProduce implements FilterProduce{
 
     @Override
-    public List<Product> filtering(List<Product> product, String filterName) {
-        return product.stream()
-                .filter(x -> x.getProducer().equals(filterName))
-                .collect(Collectors.toList());
+    public void filtering(List<Product> products, String produce) {
+        products.stream()
+                .filter(product -> product.getProducer().equals(produce))
+                .forEach(System.out::println);
     }
 }
